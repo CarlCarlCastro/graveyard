@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Player/Player.gd" type="Script" id=1]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 0.75
+height = 2.8
+
+[sub_resource type="CapsuleMesh" id=2]
+radius = 0.75
+mid_height = 2.8
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.3, 0.1, 0.3 )
+
+[node name="Player" type="KinematicBody"]
+transform = Transform( 0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -0.862141, 0, 0 )
+script = ExtResource( 1 )
+
+[node name="Head" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.27545, 0 )
+
+[node name="Camera" type="Camera" parent="Head"]
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="FloorRayCast" type="RayCast" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.809507, 0 )
+enabled = true
+
+[node name="StairsRayCast" type="RayCast" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.631142, -1.32784 )
+visible = false
+cast_to = Vector3( 0, -0.6, 0 )
+
+[node name="GroundCollision" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.12295, 0 )
+shape = SubResource( 3 )

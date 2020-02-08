@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Utilities/CameraArea.gd" type="Script" id=1]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 2.23137, 12.1413, 2.23026 )
+
+[node name="CameraArea" type="Area"]
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
+
+[node name="Camera" type="Camera" parent="."]

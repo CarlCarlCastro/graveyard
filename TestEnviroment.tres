@@ -1,0 +1,12 @@
+[gd_resource type="Environment" load_steps=3 format=2]
+
+[sub_resource type="StreamTexture" id=2]
+flags = 4
+load_path = "res://.import/hdr.png-ba69788e353fbe891d14d53a921e1ad5.stex"
+
+[sub_resource type="PanoramaSky" id=1]
+panorama = SubResource( 2 )
+
+[resource]
+background_sky = SubResource( 1 )
+ambient_light_color = Color( 0.117647, 0.121569, 0.2, 1 )
