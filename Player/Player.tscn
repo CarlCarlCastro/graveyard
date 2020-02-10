@@ -41,5 +41,5 @@ visible = false
 cast_to = Vector3( 0, -0.6, 0 )
 
 [node name="GroundCollision" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.12295, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.07104, 0 )
 shape = SubResource( 3 )

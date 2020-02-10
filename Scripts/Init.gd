@@ -36,6 +36,7 @@ func _ready():
 		$"CameraAreas/CameraArea3/CollisionShape".disabled = true
 		$"CameraAreas/CameraArea5/CollisionShape".disabled = false
 	elif (Global.choices["talkedGirl2"] and Global.choices["readDiary2"]):
+		$"CameraAreas/CameraArea3/CollisionShape".disabled = true
 		$Girl.set_translation($Girl3.translation)
 	
 	Global.current_camera = get_viewport().get_camera()
